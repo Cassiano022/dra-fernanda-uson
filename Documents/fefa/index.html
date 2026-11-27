@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dra. Fernanda Uson | Ortodontia e Ortopedia Funcional dos Maxilares</title>
+<meta name="description" content="Ortodontia e Ortopedia Funcional dos Maxilares para crianças e adolescentes em São Paulo. Invisalign Doctor (Kids & Teens) e Angel Aligner.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { ameixa: '#75597A', lilas: '#C4AED2', rose: '#D99B9E', offwhite: '#FAF8FB', grafite: '#333333' },
+    fontFamily: { script: ['Sacramento','cursive'], sans: ['Montserrat','system-ui','sans-serif'] }
+  } }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body { color: #333333; background: #FFFFFF; }
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+  a:focus-visible, button:focus-visible { outline: 3px solid #D99B9E; outline-offset: 3px; }
+  .timeline::before { content: ""; position: absolute; left: 11px; top: 6px; bottom: 6px; width: 2px; background: #C4AED2; }
+  .card-spec { transition: transform .25s ease, box-shadow .25s ease; }
+  .card-spec:hover { transform: translateY(-4px); box-shadow: 0 16px 34px -18px rgba(117,89,122,.55); }
+</style>
+</head>
+<body class="font-sans antialiased">
+
+<!-- SVG sprite: dente com coração -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="tooth-heart" viewBox="0 0 120 130">
+    <path d="M60 22c-9-9-30-12-39 2-8 13-3 33 4 49 6 14 8 31 19 31 9 0 8-24 16-24s7 24 16 24c11 0 13-17 19-31 7-16 12-36 4-49-9-14-30-11-39-2z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 80c-12-9-16-15-16-21 0-6 4-10 9-10 4 0 6 2 7 5 1-3 3-5 7-5 5 0 9 4 9 10 0 6-4 12-16 21z" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<!-- NAVBAR -->
+<header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-lilas/40">
+  <nav class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between" aria-label="Principal">
+    <a href="#inicio" class="flex items-center gap-3 text-ameixa" aria-label="Dra. Fernanda Uson - início">
+      <svg class="w-9 h-9 shrink-0"><use href="#tooth-heart"/></svg>
+      <span class="leading-none">
+        <span class="block font-script text-3xl sm:text-4xl">Dra. Fernanda Uson</span>
+        <span class="hidden md:block text-[10px] tracking-wide text-ameixa/80 mt-0.5">Ortodontia e Ortopedia Funcional dos Maxilares</span>
+      </span>
+    </a>
+    <ul class="hidden lg:flex items-center gap-7 text-sm font-medium text-grafite">
+      <li><a class="hover:text-ameixa" href="#atuacao">Atuação no Dia a Dia</a></li>
+      <li><a class="hover:text-ameixa" href="#especialidades">Especialidades</a></li>
+      <li><a class="hover:text-ameixa" href="#trajetoria">Trajetória</a></li>
+      <li><a class="hover:text-ameixa" href="#locais">Locais de Atendimento</a></li>
+      <li><a href="https://wa.me/5511996250929" target="_blank" rel="noopener" class="bg-ameixa text-white px-5 py-2.5 rounded-full hover:bg-[#614967] transition">Agendar Avaliação</a></li>
+    </ul>
+    <button id="menuBtn" class="lg:hidden p-2 text-ameixa" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg id="iconOpen" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg id="iconClose" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </nav>
+  <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-lilas/40 px-5 pb-6">
+    <ul class="flex flex-col text-base font-medium">
+      <li><a class="block py-3 border-b border-lilas/30" href="#atuacao">Atuação no Dia a Dia</a></li>
+      <li><a class="block py-3 border-b border-lilas/30" href="#especialidades">Especialidades</a></li>
+      <li><a class="block py-3 border-b border-lilas/30" href="#trajetoria">Trajetória</a></li>
+      <li><a class="block py-3 border-b border-lilas/30" href="#locais">Locais de Atendimento</a></li>
+      <li class="pt-4"><a href="https://wa.me/5511996250929" target="_blank" rel="noopener" class="block text-center bg-ameixa text-white px-5 py-3 rounded-full">Agendar Avaliação</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="inicio">
+<!-- HERO -->
+<section class="relative pt-[72px] bg-ameixa text-white overflow-hidden">
+  <div class="absolute -right-24 -top-20 w-[420px] h-[420px] rounded-full bg-lilas/25 blur-3xl" aria-hidden="true"></div>
+  <div class="absolute -left-24 bottom-0 w-[340px] h-[340px] rounded-full bg-rose/25 blur-3xl" aria-hidden="true"></div>
+  <div class="relative max-w-5xl mx-auto px-5 lg:px-8 py-20 sm:py-28 lg:py-36 text-center">
+    <svg class="w-16 h-16 sm:w-20 sm:h-20 mx-auto text-white"><use href="#tooth-heart"/></svg>
+    <h1 class="font-script text-[3.6rem] sm:text-8xl lg:text-9xl leading-[1.05] mt-4">Dra. Fernanda Uson</h1>
+    <p class="mt-6 max-w-2xl mx-auto text-base sm:text-lg lg:text-xl font-light leading-relaxed">
+      Especialista em Ortodontia e Ortopedia Funcional dos Maxilares, com atuação diária dedicada ao cuidado de crianças e adolescentes.
+    </p>
+    <ul class="mt-8 flex flex-wrap justify-center gap-3 text-sm font-semibold">
+      <li class="bg-rose text-[#3d2a42] px-4 py-2 rounded-full">Invisalign Doctor (Kids &amp; Teens)</li>
+      <li class="bg-rose text-[#3d2a42] px-4 py-2 rounded-full">Angel Aligner</li>
+      <li class="bg-lilas text-[#3d2a42] px-4 py-2 rounded-full">CRO SP-CD-89236</li>
+    </ul>
+    <a href="https://wa.me/5511996250929" target="_blank" rel="noopener"
+       class="mt-10 inline-flex items-center gap-3 bg-white text-ameixa font-semibold px-7 py-4 rounded-full shadow-lg hover:bg-offwhite transition">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.3zM12 21.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.800 1 1-3.700-.2-.4a9.800 9.800 0 0 1-1.500-5.200c0-5.400 4.400-9.800 9.900-9.800 2.600 0 5.100 1 6.900 2.900a9.700 9.700 0 0 1 2.900 6.900c0 5.400-4.400 9.900-9.800 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1-.3-.1-.5-.1-.7.100-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.1-1.200-.4-2.300-1.400-.9-.8-1.400-1.700-1.600-2-.2-.3 0-.5.100-.6l.4-.5c.1-.2.200-.3.300-.5.100-.2 0-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.500s1.100 2.900 1.200 3.100c.1.200 2.100 3.200 5.100 4.500.7.300 1.300.5 1.700.6.700.2 1.400.2 1.900.1.600-.1 1.800-.7 2-1.400.3-.7.3-1.300.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>
+      (11) 99625-0929
+    </a>
+    <p class="mt-4 text-sm text-white/80">Agende uma avaliação pelo WhatsApp</p>
+  </div>
+</section>
+
+<!-- ATUAÇÃO NO DIA A DIA -->
+<section id="atuacao" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-2xl">
+      <h2 class="text-3xl sm:text-4xl font-semibold text-ameixa leading-tight">Atuação no dia a dia</h2>
+      <p class="mt-4 text-lg text-grafite/80 leading-relaxed">Na rotina da clínica, o cuidado é pensado para acompanhar o crescimento de cada criança e adolescente e para tranquilizar os pais em todas as etapas.</p>
+    </div>
+    <div class="mt-12 grid gap-6 md:grid-cols-2">
+      <article class="reveal bg-offwhite border border-lilas/50 rounded-3xl p-7">
+        <h3 class="text-xl font-semibold text-ameixa">Foco diário em crianças e adolescentes</h3>
+        <p class="mt-3 leading-relaxed">Atendimento cotidiano voltado ao desenvolvimento harmônico do rosto, da mordida e da respiração/função oral, com linguagem e acolhimento adaptados a cada faixa etária.</p>
+      </article>
+      <article class="reveal bg-offwhite border border-lilas/50 rounded-3xl p-7">
+        <h3 class="text-xl font-semibold text-ameixa">Acompanhamento de crescimento e ortopedia funcional</h3>
+        <p class="mt-3 leading-relaxed">Orientação preventiva e interceptativa para guiar o crescimento dos maxilares na época certa, reduzindo a necessidade de extrações dentárias ou intervenções mais complexas no futuro.</p>
+      </article>
+      <article class="reveal bg-offwhite border border-lilas/50 rounded-3xl p-7">
+        <h3 class="text-xl font-semibold text-ameixa">Planejamento e acompanhamento com alinhadores e aparelhos</h3>
+        <p class="mt-3 leading-relaxed">Uso diário de tecnologias como Invisalign e Angel Aligner (incluindo linhas Kids e Teens), além da ortodontia corretiva, com acompanhamento próximo da evolução de cada paciente.</p>
+      </article>
+      <article class="reveal bg-offwhite border border-lilas/50 rounded-3xl p-7">
+        <h3 class="text-xl font-semibold text-ameixa">Integração com pais e clínicas parceiras</h3>
+        <p class="mt-3 leading-relaxed">Comunicação clara com os responsáveis sobre cada etapa do tratamento e atuação colaborativa em clínicas multidisciplinares.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ESPECIALIDADES -->
+<section id="especialidades" class="py-20 lg:py-28 bg-offwhite">
+  <div class="max-w-6xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-2xl">
+      <h2 class="text-3xl sm:text-4xl font-semibold text-ameixa leading-tight">Especialidades e tratamentos</h2>
+      <p class="mt-4 text-lg text-grafite/80 leading-relaxed">Toque em um tratamento para ver como ele ajuda no dia a dia do paciente.</p>
+    </div>
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="reveal card-spec bg-white rounded-3xl border border-lilas/50 overflow-hidden flex flex-col">
+        <div class="h-2 bg-ameixa"></div>
+        <button class="spec-btn text-left p-6 flex-1 flex flex-col" aria-expanded="false">
+          <h3 class="text-lg font-semibold text-ameixa">Ortopedia Funcional dos Maxilares</h3>
+          <p class="mt-3 text-sm leading-relaxed">Foco no crescimento facial saudável, prevenção de cirurgias e extrações futuras em crianças.</p>
+          <span class="mt-auto pt-4 text-sm font-semibold text-ameixa flex items-center gap-1">Saber mais <span class="spec-sign text-lg leading-none">+</span></span>
+        </button>
+        <div class="spec-more hidden px-6 pb-6 text-sm leading-relaxed bg-offwhite pt-4">Aparelhos que orientam o desenvolvimento dos maxilares durante a fase de crescimento, melhorando espaço, mordida e função oral.</div>
+      </div>
+      <div class="reveal card-spec bg-white rounded-3xl border border-lilas/50 overflow-hidden flex flex-col">
+        <div class="h-2 bg-rose"></div>
+        <button class="spec-btn text-left p-6 flex-1 flex flex-col" aria-expanded="false">
+          <h3 class="text-lg font-semibold text-ameixa">Ortodontia Infantil e Adolescente (Kids &amp; Teens)</h3>
+          <p class="mt-3 text-sm leading-relaxed">Acompanhamento especializado em dentição mista e permanente com abordagem lúdica e acolhedora.</p>
+          <span class="mt-auto pt-4 text-sm font-semibold text-ameixa flex items-center gap-1">Saber mais <span class="spec-sign text-lg leading-none">+</span></span>
+        </button>
+        <div class="spec-more hidden px-6 pb-6 text-sm leading-relaxed bg-offwhite pt-4">Consultas conduzidas com linguagem adequada à idade, para que a criança ou o adolescente se sinta seguro durante todo o tratamento.</div>
+      </div>
+      <div class="reveal card-spec bg-white rounded-3xl border border-lilas/50 overflow-hidden flex flex-col">
+        <div class="h-2 bg-lilas"></div>
+        <button class="spec-btn text-left p-6 flex-1 flex flex-col" aria-expanded="false">
+          <h3 class="text-lg font-semibold text-ameixa">Alinhadores Invisíveis (Invisalign &amp; Angel Aligner)</h3>
+          <p class="mt-3 text-sm leading-relaxed">Tecnologia moderna, conforto e estética para crianças, jovens e adultos.</p>
+          <span class="mt-auto pt-4 text-sm font-semibold text-ameixa flex items-center gap-1">Saber mais <span class="spec-sign text-lg leading-none">+</span></span>
+        </button>
+        <div class="spec-more hidden px-6 pb-6 text-sm leading-relaxed bg-offwhite pt-4">Planejamento digital e acompanhamento próximo, com linhas específicas para pacientes Kids e Teens.</div>
+      </div>
+      <div class="reveal card-spec bg-white rounded-3xl border border-lilas/50 overflow-hidden flex flex-col">
+        <div class="h-2 bg-ameixa"></div>
+        <button class="spec-btn text-left p-6 flex-1 flex flex-col" aria-expanded="false">
+          <h3 class="text-lg font-semibold text-ameixa">Ortodontia Corretiva</h3>
+          <p class="mt-3 text-sm leading-relaxed">Tratamentos completos para alinhamento e função mastigatória.</p>
+          <span class="mt-auto pt-4 text-sm font-semibold text-ameixa flex items-center gap-1">Saber mais <span class="spec-sign text-lg leading-none">+</span></span>
+        </button>
+        <div class="spec-more hidden px-6 pb-6 text-sm leading-relaxed bg-offwhite pt-4">Correção do posicionamento dos dentes e da mordida, com atenção à estética e ao funcionamento de toda a boca.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAJETÓRIA -->
+<section id="trajetoria" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-5 lg:px-8">
+    <div class="reveal flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl sm:text-4xl font-semibold text-ameixa leading-tight">Portfólio e trajetória acadêmica</h2>
+        <p class="mt-4 text-lg text-grafite/80 leading-relaxed">Formação contínua em ortodontia e ortopedia funcional, aliada à prática clínica diária.</p>
+      </div>
+      <div class="bg-lilas/35 rounded-3xl px-8 py-5 text-ameixa shrink-0">
+        <span class="block text-5xl font-bold leading-none">16+</span>
+        <span class="block mt-1 text-sm font-medium">anos de experiência clínica, desde 2010</span>
+      </div>
+    </div>
+
+    <div class="mt-14 grid gap-12 lg:grid-cols-2">
+      <div class="reveal">
+        <h3 class="text-xl font-semibold text-ameixa mb-6">Formação e especializações</h3>
+        <ol class="timeline relative space-y-6 pl-10">
+          <li class="relative"><span class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-ameixa border-4 border-white ring-2 ring-lilas"></span><p class="text-sm font-semibold text-rose-700" style="color:#9a5f63">2026</p><p class="font-medium">Especialização em Ortopedia Funcional dos Maxilares</p><p class="text-sm text-grafite/75">NEOM SP · 36 meses</p></li>
+          <li class="relative"><span class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-ameixa border-4 border-white ring-2 ring-lilas"></span><p class="text-sm font-semibold" style="color:#9a5f63">2023</p><p class="font-medium">Atualização em Ortopedia Funcional dos Maxilares</p><p class="text-sm text-grafite/75">NEOM SP · 24 meses</p></li>
+          <li class="relative"><span class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-ameixa border-4 border-white ring-2 ring-lilas"></span><p class="text-sm font-semibold" style="color:#9a5f63">2014</p><p class="font-medium">Especialização em Ortodontia</p><p class="text-sm text-grafite/75">APCD Santo André · 36 meses</p></li>
+          <li class="relative"><span class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-ameixa border-4 border-white ring-2 ring-lilas"></span><p class="text-sm font-semibold" style="color:#9a5f63">2010</p><p class="font-medium">Curso Avançado de Ortodontia Corretiva</p><p class="text-sm text-grafite/75">APCD Santo André · 18 meses</p></li>
+          <li class="relative"><span class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-ameixa border-4 border-white ring-2 ring-lilas"></span><p class="text-sm font-semibold" style="color:#9a5f63">2002–2005</p><p class="font-medium">Graduação em Odontologia</p><p class="text-sm text-grafite/75">Universidade Metodista de São Paulo e Universidade Metropolitana de Santos</p></li>
+        </ol>
+      </div>
+      <div class="reveal">
+        <h3 class="text-xl font-semibold text-ameixa mb-6">Credenciamentos e imersões</h3>
+        <ol class="timeline relative space-y-6 pl-10">
+          <li class="relative"><span class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-rose border-4 border-white ring-2 ring-lilas"></span><p class="text-sm font-semibold" style="color:#9a5f63">2024</p><p class="font-medium">Credenciamento Angel Aligner</p></li>
+          <li class="relative"><span class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-rose border-4 border-white ring-2 ring-lilas"></span><p class="text-sm font-semibold" style="color:#9a5f63">2024</p><p class="font-medium">Sistema Invisalign em Pacientes Kids e Teens</p><p class="text-sm text-grafite/75">Instituto Mazon Bigliazzi</p></li>
+          <li class="relative"><span class="absolute -left-10 top-1 w-6 h-6 rounded-full bg-rose border-4 border-white ring-2 ring-lilas"></span><p class="text-sm font-semibold" style="color:#9a5f63">2021</p><p class="font-medium">Credenciamento Invisalign Doctor</p></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCAIS -->
+<section id="locais" class="py-20 lg:py-28 bg-offwhite">
+  <div class="max-w-6xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-2xl">
+      <h2 class="text-3xl sm:text-4xl font-semibold text-ameixa leading-tight">Locais de atendimento</h2>
+      <p class="mt-4 text-lg text-grafite/80 leading-relaxed">Atendimento atual em São Paulo, com foco em crianças e adolescentes.</p>
+    </div>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <article class="reveal bg-white rounded-3xl p-7 border-t-4 border-ameixa shadow-sm">
+        <h3 class="text-xl font-semibold text-ameixa">Clínica Bem me Quer</h3>
+        <p class="mt-1 font-medium">Vila Mariana, São Paulo</p>
+        <p class="mt-3 text-sm leading-relaxed">Atendimento exclusivo infantil e adolescente · desde 2021</p>
+      </article>
+      <article class="reveal bg-white rounded-3xl p-7 border-t-4 border-rose shadow-sm">
+        <h3 class="text-xl font-semibold text-ameixa">Clínica Amadas</h3>
+        <p class="mt-1 font-medium">Pirituba, São Paulo</p>
+        <p class="mt-3 text-sm leading-relaxed">Atendimento exclusivo infantil e adolescente · desde 2024</p>
+      </article>
+      <article class="reveal bg-white rounded-3xl p-7 border-t-4 border-lilas shadow-sm">
+        <h3 class="text-xl font-semibold text-ameixa">Consultório Particular</h3>
+        <p class="mt-1 font-medium">Atendimento personalizado</p>
+        <p class="mt-3 text-sm leading-relaxed">Desde 2010</p>
+      </article>
+    </div>
+    <p class="reveal mt-8 text-sm text-grafite/70 max-w-3xl">Desde 2011, sólida experiência anterior em clínicas de referência em São Paulo e ABC (Água Fria, Penha, Santo André, entre outras).</p>
+    <div class="reveal mt-10">
+      <a href="https://wa.me/5511996250929" target="_blank" rel="noopener" class="inline-block bg-ameixa text-white font-semibold px-7 py-4 rounded-full hover:bg-[#614967] transition">Agendar Avaliação pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- RODAPÉ -->
+<footer class="bg-ameixa text-white">
+  <div class="max-w-6xl mx-auto px-5 lg:px-8 py-14 text-center">
+    <svg class="w-12 h-12 mx-auto"><use href="#tooth-heart"/></svg>
+    <p class="font-script text-5xl mt-2">Dra. Fernanda Uson</p>
+    <p class="mt-2 text-sm">CRO SP-CD-89236</p>
+    <p class="mt-1 text-sm text-white/85">Ortodontia · Ortopedia Funcional dos Maxilares</p>
+    <p class="mt-6 text-sm"><a class="underline underline-offset-4" href="https://wa.me/5511996250929" target="_blank" rel="noopener">(11) 99625-0929</a></p>
+    <p class="mt-8 max-w-3xl mx-auto text-xs leading-relaxed text-white/80 border-t border-white/25 pt-6">
+      Este site tem caráter exclusivamente informativo e está em conformidade com o Código de Ética Odontológica e as normas do Conselho Federal de Odontologia. Não divulgamos preços, promoções nem imagens de "antes e depois". Cada tratamento depende de avaliação clínica individual, e os resultados variam de paciente para paciente.
+    </p>
+    <p class="mt-4 text-xs text-white/70">© <span id="year"></span> Dra. Fernanda Uson. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5511996250929" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp"
+   class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:scale-105 transition">
+  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.9 11.9 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.3zM12 21.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.800 1 1-3.700-.2-.4a9.800 9.800 0 0 1-1.500-5.200c0-5.400 4.400-9.800 9.900-9.800 2.600 0 5.100 1 6.900 2.900a9.700 9.700 0 0 1 2.900 6.900c0 5.400-4.400 9.900-9.800 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1-.3-.1-.5-.1-.7.1-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.1-1.200-.4-2.300-1.400-.9-.8-1.400-1.700-1.600-2-.2-.3 0-.5.100-.6l.4-.5c.1-.2.200-.3.300-.5.100-.2 0-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.500s1.100 2.900 1.200 3.100c.1.200 2.100 3.200 5.100 4.500.7.300 1.300.5 1.700.6.700.2 1.400.2 1.900.1.600-.1 1.800-.7 2-1.400.3-.7.3-1.300.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script>
+  // Menu hambúrguer
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  function setMenu(open) {
+    mobileMenu.classList.toggle('hidden', !open);
+    document.getElementById('iconOpen').classList.toggle('hidden', open);
+    document.getElementById('iconClose').classList.toggle('hidden', !open);
+    menuBtn.setAttribute('aria-expanded', open);
+  }
+  menuBtn.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  // Cards de especialidades
+  document.querySelectorAll('.spec-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const more = btn.parentElement.querySelector('.spec-more');
+      const open = more.classList.toggle('hidden') === false;
+      btn.setAttribute('aria-expanded', open);
+      btn.querySelector('.spec-sign').textContent = open ? '–' : '+';
+    });
+  });
+
+  // Fade-in no scroll
+  const items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    items.forEach(el => io.observe(el));
+  } else {
+    items.forEach(el => el.classList.add('visible'));
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
